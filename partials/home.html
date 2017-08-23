@@ -1,0 +1,88 @@
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">SHA-256 Hash
+                <small>Deloitte's Cryptographic Generator Tool</small>
+            </h1>
+        </div>
+
+        <div class="col-lg-12">
+            <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+            <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="http://thecryptoworld.org/wp-content/uploads/2016/01/crypto_325345456456.jpg"></iframe>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <!-- /.row -->
+
+    <div class="row">
+
+        <div class="col-sm-8">
+            <head>
+                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+                <meta charset="utf-8" />
+                <script type="text/javascript" src="../bower_components/crypto-js/crypto-js.js"></script>
+                <script type="text/javascript">
+                    // Create texbox using angularjs
+                    var myApp=angular.module("myModule", []);
+
+                    var empController=function($scope){
+                        $scope.getData = function(getData){
+                            $scope.textBoxValue = String(CryptoJS.SHA256(getData));
+                        };
+                    };
+
+                    myApp.controller("empController", empController);
+
+                </script>
+            </head>
+            <body ng-app="myModule">
+                <div class="clearfix"></div>
+                <div class="form-group col-lg-10" ng-controller="empController">
+                    <label for="data">Please insert data to hash</label>
+                    <textarea class="form-control" rows="6" id="data" type="text" ng-model="textboxdata"/></textarea><br>
+                    <button type="submit" class="btn btn-primary" ng-click="getData(textboxdata)">Submit</button><br /><br>
+                    <p>SHA-256 Hash: {{textBoxValue}}<p>
+                </div>
+        </div>
+
+        <div class="col-sm-4">
+            <h3>EMEA Deloitte Blockchain Lab</h3>
+            <h4>SHA-256 Cryptographic Tool</h4>
+
+            <p>
+                Deloitte Digital<br>
+                Whitaker Court, D02 W529, Sir John Rogerson's Quay, Dublin 2<br>
+            </p>
+
+            <p><i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: 000 0000 0000</p>
+
+            <p><i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a
+                    href="mailto:ldelaney@deloitte.ie">ldelaney@deloitte.ie</a></p>
+
+            <p><i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:15 PM</p>
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link"><a href="#facebook-page" data-toggle="tooltip"
+                                                            data-placement="top" title="Facebook"><i
+                        class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li class="tooltip-social linkedin-link"><a href="#linkedin-company-page" data-toggle="tooltip"
+                                                            data-placement="top" title="LinkedIn"><i
+                        class="fa fa-linkedin-square fa-2x"></i></a></li>
+                <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip"
+                                                           data-placement="top" title="Twitter"><i
+                        class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li class="tooltip-social google-plus-link"><a href="#google-plus-page" data-toggle="tooltip"
+                                                               data-placement="top" title="Google+"><i
+                        class="fa fa-google-plus-square fa-2x"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div><!-- /.container -->
