@@ -1,10 +1,4 @@
-/* 
-Custom CSS for...
-'Modern Business' HTML Theme by Start Bootstrap
 
-All Start Bootstrap themes are licensed under Apache 2.0. 
-For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
-*/
 
 /* Global Styles */
 
@@ -43,7 +37,6 @@ p {
 
 .section-colored {
     background-color: #e1e1e1;
-    /* change this to change the background color of a colored section */
 }
 
 .sidebar {
@@ -56,7 +49,6 @@ p {
     border: 1px solid #cccccc;
 }
 
-/* Half Page Height Carousel Customization */
 .carousel {
     height: 50%;
 }

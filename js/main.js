@@ -1,7 +1,7 @@
-/**
- * AngularJS Tutorial 1
- * @author Lorcan Delaney <ldelaney@deloitte.ie>
- */
+
+
+ // @author Lorcan Delaney <ldelaney@deloitte.ie>
+ 
 
 /**
  * Main AngularJS Web Application
